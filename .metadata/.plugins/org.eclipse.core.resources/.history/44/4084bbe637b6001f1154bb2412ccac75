@@ -1,0 +1,30 @@
+import java.util.*;
+class Complex{
+	int real,imag;
+	Complex(int real,int imag){
+		
+	}
+}
+
+public class ComplexA1 {
+
+	public static void main(String[] args) {
+		int a1,a2;
+		int b1,b2;
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("Enter the real part of the first no:");
+		a1=Integer.parseInt(sc.nextLine());
+		System.out.println("Enter the imaginary part of the first no:");
+		a2=Integer.parseInt(sc.nextLine());
+		
+		
+		System.out.println("Enter the real part of the Second no:");
+		b1=Integer.parseInt(sc.nextLine());
+		System.out.println("Enter the imaginary part of the Second no:");
+		b2=Integer.parseInt(sc.nextLine());
+		
+
+	}
+
+}
