@@ -182,6 +182,35 @@ class Database{
 	
 	public void search() {
 		
+		try {
+			System.out.println("Enter ID to be search:");
+			String id=sc.nextLine();
+			boolean found=false;
+			
+			Scanner reader=new Scanner(new File(FILENAME));
+			while(reader.hasNextLine()) {
+				String record=reader.nextLine();
+				if(record.startsWith(id+",")) {
+					String[] arr=record.split(",");
+					System.out.println("ID: "+arr[0]);
+					System.out.println("Name: "+arr[1]);
+					System.out.println("Roll no: "+arr[2]);
+					System.out.println("Class: "+arr[3]);
+					System.out.println("Marks: "+arr[4]);
+					System.out.println("Adress: "+arr[5]);
+					
+					found=true;
+				}
+			}
+			
+			if(!found) {
+				System.out.println("data not found");
+			}
+			
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		
 	}
 	
 }
@@ -222,8 +251,6 @@ public class Assignment8 {
 				
 			default:
 				System.out.println("Invalid Option");
-				
-				
 				
 			
 			}
