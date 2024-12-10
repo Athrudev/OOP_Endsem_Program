@@ -2,6 +2,7 @@ import java.util.*;
 abstract class Shape{
 	double length,width;
 	abstract void compute_area();
+	abstract void getDimension();
 	
 }
 
@@ -93,13 +94,13 @@ public class BindingA4 {
 			
 			switch(ch) {
 				case 1:
-					Triangle t=new Triangle();
+					Shape t=new Triangle();
 					t.getDimension();
 					t.compute_area();
 					break;
 					
 				case 2:
-					Rectangle r=new Rectangle();
+					Shape r=new Rectangle();
 					r.getDimension();
 					r.compute_area();
 					break;
